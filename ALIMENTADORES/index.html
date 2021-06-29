@@ -18,9 +18,8 @@
     <img src="imagenes/alimentador.jpg" class="imagen">
     <img src="imagenes/alimentador.jpg" class="imagen"> -->
 
-    <div id="root" text="center">
-
-    </div>
+    <div id="root" text="center"></div>
+    <div id="root2" text="center"></div>
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyBJYkf1vdBb6i6TkZgvy2jDU-qT5REf8Fw",
@@ -39,17 +38,17 @@
                     <div> ${element.val()}</div>
                 `
             });
-        })
-
-        firebase2.initializeApp(firebaseConfig);
-        var dbRef2 = firebase2.database().ref('nombres');
-        dbRef2.on("value", function (snapshot) {
-            snapshot.forEach(function (element) {
-                document.querySelector('#root').innerHTML += `
+            var dbRef = firebase.database().ref('nombres');
+            dbRef.on("value", function (snapshot) {
+                snapshot.forEach(function (element) {
+                    document.querySelector('#root2').innerHTML += `
                     <div> ${element.val()}</div>
                 `
-            });
+                });
+            })
         })
+
+
     </script>
 
 </body>
