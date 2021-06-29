@@ -5,15 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIREBASE REALTIME</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>ALIMENTADORES</title>
 </head>
 
-<body>
+<body class="color">
     <div id="app">
-
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
-    <script src=" index.js"></script>
+    <!-- <script src=" index.js"></script>
+
+    <img src="imagenes/alimentador.jpg" class="imagen">
+    <img src="imagenes/alimentador.jpg" class="imagen"> -->
+
+    <div id="root" text="center">
+
+    </div>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBJYkf1vdBb6i6TkZgvy2jDU-qT5REf8Fw",
+            authDomain: "preyecto-iot.firebaseapp.com",
+            databaseURL: "https://preyecto-iot-default-rtdb.firebaseio.com/",
+            projectId: "preyecto-iot",
+            storageBucket: "preyecto-iot.appspot.com",
+            messagingSenderId: "727817961430",
+            appId: "1:727817961430:web:6453cb22169300a9a02e77"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var dbRef = firebase.database().ref('emails');
+        dbRef.on("value", function (snapshot) {
+            snapshot.forEach(function (element) {
+                document.querySelector('#root').innerHTML += `
+                    <div> ${element.val()}</div>
+                `
+            });
+        })
+
+        firebase2.initializeApp(firebaseConfig);
+        var dbRef2 = firebase2.database().ref('nombres');
+        dbRef2.on("value", function (snapshot) {
+            snapshot.forEach(function (element) {
+                document.querySelector('#root').innerHTML += `
+                    <div> ${element.val()}</div>
+                `
+            });
+        })
+    </script>
+
 </body>
 
 </html>
