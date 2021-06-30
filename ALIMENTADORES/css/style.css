@@ -1,0 +1,26 @@
+.titulo{
+    margin: 40px;
+}
+.contTitulo{
+    border: 2px;
+    
+}
+.imagen{
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    
+}
+.textA{
+    font-family: fantasy;
+    color: orange;
+}
+.textB{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px;
+}
+body{
+    background-color: bisque;
+}

@@ -5,21 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../ALIMENTADORES/css/bootstrap.css">
+    <link rel="stylesheet" href="../ALIMENTADORES/css/style.css">
     <title>ALIMENTADORES</title>
 </head>
 
-<body class="color">
+<body >
     <div id="app">
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase.js"></script>
     <script src=" index.js"></script>
+    <!-- Nav -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/ALIMENTADORES/imagenes/gallinerojpg.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Alimentadores para Gallineros 
+        </a>
+        </div>
+    </nav>
+    <!-- End Nav -->
 
-    <img src="imagenes/alimentador.jpg" class="imagen">
-    <img src="imagenes/alimentador.jpg" class="imagen">
+    <!-- Titulo -->
+    <center>
+        <div class="contTitulo badge bg-warning text-wrap">
+            <h1 class="titulo">Proyecto IOT - Alimenadores para gallineros</h1>
+        </div>
+    </center>
+    <!-- End Titulo -->
 
-    <div id="root" text="center"></div>
-    <div id="root2" text="center"></div>
+    <!-- Gallineros -->
+    <div class="container">
+        <div class="row">
+            <!-- Gallinero 1 -->
+            <div class="col ">
+                <img src="imagenes/gallinerojpg.jpg" class="imagen img-thumbnail">
+                <center>
+                    <h2 class="textA">Alimentador 1:</h2>
+                    <h3 class="textB" id="root" text="center"></h3>
+                </center>
+            </div>
+            <!-- Gallinero 2 -->
+            <div class="col ">
+                <img src="imagenes/gallinerojpg.jpg" class="imagen img-thumbnail">
+                <center>
+                    <h2 class="textA">Alimentador 2:</h2>
+                    <h3 class="textB"  id="root2" text="center"></h3>
+                </center>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    
+    
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyBJYkf1vdBb6i6TkZgvy2jDU-qT5REf8Fw",
@@ -49,7 +90,7 @@
             })
         })
 
-        alert("Datos recibidos, Por favor, cierre esta ventana");
+        //alert("Datos recibidos, Por favor, cierre esta ventana");
     </script>
 
 </body>
