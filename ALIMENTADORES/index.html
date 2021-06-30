@@ -39,7 +39,7 @@
         <div class="row">
             <!-- Gallinero 1 -->
             <div class="col ">
-                <img src="imagenes/gallinerojpg.jpg" class="imagen img-thumbnail">
+                <img src="imagenes/alimentador.jpg" class="imagen img-thumbnail">
                 <center>
                     <h2 class="textA">Alimentador 1:</h2>
                     <h3 class="textB" id="root" text="center"></h3>
@@ -47,12 +47,67 @@
             </div>
             <!-- Gallinero 2 -->
             <div class="col ">
-                <img src="imagenes/gallinerojpg.jpg" class="imagen img-thumbnail">
+                <img src="imagenes/alimentador.jpg" class="imagen img-thumbnail">
                 <center>
                     <h2 class="textA">Alimentador 2:</h2>
                     <h3 class="textB"  id="root2" text="center"></h3>
                 </center>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Gallinero 1 -->
+            <div class="col ">
+                <img src="imagenes/Gallinero1.jpg" class="imagen img-thumbnail">
+                <center>
+                    <h2 class="textA">Gallinero 1:</h2>
+                    <h3 class="textB" id="root3" text="center"></h3>
+                </center>
+            </div>
+            <!-- Gallinero 2 -->
+            <div class="col ">
+                <img src="imagenes/Gallinero1.jpg" class="imagen img-thumbnail">
+                <center>
+                    <h2 class="textA">Gallinero 2:</h2>
+                    <h3 class="textB"  id="root4" text="center"></h3>
+                </center>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container contacto">
+        <div class="row">
+            <div class="col">
+                <center>
+                    <p class="parrafCont">Desarrollador: Ricardo Hiram Morales Vaca</p>
+                    <p class="parrafCont">Numero de Control: 16460143</p>
+                    <p class="parrafCont">Contacto: 16460143@colima.tecnm.mx</p>
+                </center>
+            </div>
+            <div class="col">
+                <center>
+                    <p class="parrafCont">Desarrollador: Sergio Antonio Ortiz Figueroa</p>
+                    <p class="parrafCont">Numero de Control: 16360130</p>
+                    <p class="parrafCont">Contacto: 16360130@colima.tecnm.mx</p>
+                </center>
+            </div>
+            <div class="col">
+                <center>
+                    <p class="parrafCont">Desarrollador: Jonathan Joel Diaz Magaña</p>
+                    <p class="parrafCont">Numero de Control: 16460368</p>
+                    <p class="parrafCont">Contacto: 16460368@colima.tecnm.mx</p>
+                </center>
+            </div>
+            <div class="col">
+                <center>
+                    <p class="parrafCont">Desarrollador: Joel Martin Trujillo Licea</p>
+                    <p class="parrafCont">Numero de Control: 16460416</p>
+                    <p class="parrafCont">Contacto: 16460416@colima.tecnm.mx</p>
+                </center>
+            </div>
+
         </div>
     </div>
     
@@ -61,37 +116,7 @@
 
     
     
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyBJYkf1vdBb6i6TkZgvy2jDU-qT5REf8Fw",
-            authDomain: "preyecto-iot.firebaseapp.com",
-            databaseURL: "https://preyecto-iot-default-rtdb.firebaseio.com/",
-            projectId: "preyecto-iot",
-            storageBucket: "preyecto-iot.appspot.com",
-            messagingSenderId: "727817961430",
-            appId: "1:727817961430:web:6453cb22169300a9a02e77"
-        };
-        firebase.initializeApp(firebaseConfig);
-        var dbRef = firebase.database().ref('emails');
-        dbRef.on("value", function (snapshot) {
-            snapshot.forEach(function (element) {
-                document.querySelector('#root').innerHTML += `
-                    <div> ${element.val()}</div>
-                `
-            });
-            var dbRef = firebase.database().ref('nombres');
-            dbRef.on("value", function (snapshot) {
-                snapshot.forEach(function (element) {
-                    document.querySelector('#root2').innerHTML += `
-                    <div> ${element.val()}</div>
-                    
-                `
-                });
-            })
-        })
-
-        //alert("Datos recibidos, Por favor, cierre esta ventana");
-    </script>
+    <script src="/ALIMENTADORES/index.js"></script>
 
 </body>
 
