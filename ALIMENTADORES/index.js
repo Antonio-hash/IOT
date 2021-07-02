@@ -13,15 +13,18 @@ firebase.initializeApp(firebaseConfig);
 var dbRef = firebase.database().ref('Alimentador1');
 dbRef.on("value", function (snapshot) {
     snapshot.forEach(function (element) {
+        var porc = ((element.val())*100)/1000;
         document.querySelector('#root').innerHTML += `
-            <div> ${element.val()}</div>
+            <div> ${element.val()} gr.</div>
+
         `
     });
     var dbRef = firebase.database().ref('Alimentador2');
     dbRef.on("value", function (snapshot) {
         snapshot.forEach(function (element) {
+            var porc = ((element.val()) *100) / 1000;
             document.querySelector('#root2').innerHTML += `
-            <div> ${element.val()}</div>
+            <div> ${element.val()} gr.</div>
             
         `
         });
@@ -29,8 +32,9 @@ dbRef.on("value", function (snapshot) {
     var dbRef = firebase.database().ref('Gallinero1');
     dbRef.on("value", function (snapshot) {
         snapshot.forEach(function (element) {
+            var porc = ((element.val())*100)/1000;
             document.querySelector('#root3').innerHTML += `
-            <div> ${element.val()}</div>
+            <div> ${element.val()} gr. </div>
             
         `
         console.log(dbRef);
@@ -39,8 +43,9 @@ dbRef.on("value", function (snapshot) {
     var dbRef = firebase.database().ref('Gallinero2');
     dbRef.on("value", function (snapshot) {
         snapshot.forEach(function (element) {
+            var porc = ((element.val())*100)/1000;
             document.querySelector('#root4').innerHTML += `
-            <div> ${element.val()}</div>
+            <div> ${element.val()} gr. </div>
             
         `
         });
